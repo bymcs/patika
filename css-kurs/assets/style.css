@@ -1,0 +1,22 @@
+body {
+    background-color: slategrey;
+
+}
+
+
+h1 {
+    background-color: red;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+.upper {
+
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+#upper2 {
+    background-color: red;    
+}
