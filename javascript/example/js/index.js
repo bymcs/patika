@@ -1,14 +1,7 @@
-document.body.style.backgroundColor = 'gray'
-document.body.style.textAlign = 'center'
+let greeting = document.querySelector("#greeting")
+greeting.addEventListener('click',domClick)
 
-let username = prompt('ID Giriniz:')
-
-if(username){
-
-    console.log(`ID: ${username}`)
-
-}else{
-
-    console.log(`NULL`)
-    
+function domClick() {
+    console.log('TIKLANDI')
+    greeting.style.color == "red" ? greeting.style.color == "black" : greeting.style.color == "red"
 }
