@@ -5,12 +5,10 @@ let azaltDOM = document.querySelector('#azalt')
 
 counterDOM.innerHTML = counter
 
-arttirDOM.addEventListener("click", function(){
+arttirDOM.addEventListener("click", clickEvent)
+azaltDOM.addEventListener("click", clickEvent)
 
-    counterDOM.innerHTML = 12
-})
-
-azaltDOM.addEventListener("click", function(){
-
-    console.log(this.id)
-})
+function clickEvent(){
+     this.id == "arttir" ? counter += 1 : counter -= 1
+    counterDOM.innerHTML = counter
+}
