@@ -1,7 +1,16 @@
-let greeting = document.querySelector("#greeting")
-greeting.addEventListener('click',domClick)
+let counter = 0
+let counterDOM = document.querySelector('#counter')
+let arttirDOM = document.querySelector('#arttir')
+let azaltDOM = document.querySelector('#azalt')
 
-function domClick() {
-    console.log('TIKLANDI')
-    greeting.style.color == "red" ? greeting.style.color == "black" : greeting.style.color == "red"
-}
+counterDOM.innerHTML = counter
+
+arttirDOM.addEventListener("click", function(){
+
+    counterDOM.innerHTML = 12
+})
+
+azaltDOM.addEventListener("click", function(){
+
+    console.log(this.id)
+})
