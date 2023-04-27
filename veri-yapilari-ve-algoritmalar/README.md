@@ -1,6 +1,6 @@
 
 
-[22,27,16,2,18,6] -> Insertion Sort türüne göre aşamalarını yazınız.
+#[22,27,16,2,18,6] -> Insertion Sort türüne göre aşamalarını yazınız.
 
 1- [22,27,16,2,18,6] n
 2- [2,27,16,22,18,6] n-1
@@ -11,7 +11,7 @@ Big-O gösterimi n² dir. Big-O =(n²)
 
 Time Complexity: Average case
 
-////////////////////////////////////////////////////////////////////////
+##////////////////////////////////////////////////////////////////////////
 
 [7,3,5,8,2,9,4,15,6] dizisinin Selection Sort'a göre ilk 4 adımını yazınız.
 
