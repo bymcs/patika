@@ -148,5 +148,10 @@ const menuList = (menuItems) => {
   section.innerHTML = displayMenu;
 };
 
-menuList(menu);
-categoryList();
+try {
+  menuList(menu);
+  categoryList();
+} catch (error) {
+  
+}
+
