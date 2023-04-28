@@ -23,7 +23,7 @@ function clickEvent(){
     localStorage.setItem('counter',counter)
 }
 
-function clickEventTwo(){
-    
-    this.style.color == 'red' ? this.style.color = 'yellow' : this.style.color = 'red' 
+function clickEventTwo() {
+
+    this.style.color == 'red' ? this.style.color = 'yellow' : this.style.color = 'red'
 }
