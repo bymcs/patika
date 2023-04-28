@@ -158,3 +158,9 @@ console.log(birey.merhabaDe(birey.yasHesapla()));
 function yaz(){console.log("Merhaba Kodluyoruz")}
 
 console.log(yaz["name"]);
+
+
+let person={name:"Selin",city:"Ankara",favoriteColor:"aqua blue"}; 
+let {name:foo}=person;
+
+
