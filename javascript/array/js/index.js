@@ -82,13 +82,79 @@ const USERS = ["AYSE", "MehMet", "TugCE", "AkSEL"]
 // newName icinde ilk harf buyuk olsun
 // {userName: "AYSE", shortName: "A.", newName: "Ayse"}
 
-const NEW_USERS = USERS.map(user => user.toUpperCase())
-console.log(NEW_USERS)
+// const NEW_USERS = USERS.map(user => user.toUpperCase())
+// console.log(NEW_USERS)
 
-const USERS_OBJ = USERS.map( item =>
-{
-return {userName: item, shortName: `${item[0]}.`, newName: `${item[0].toUpperCase()}${item.slice(1).toLowerCase()}` }
-}
-)
+// const USERS_OBJ = USERS.map( item =>
+// {
+// return {userName: item, shortName: `${item[0]}.`, newName: `${item[0].toUpperCase()}${item.slice(1).toLowerCase()}` }
+// }
+// )
 
-console.log(USERS_OBJ)
+// console.log(USERS_OBJ)
+
+
+// Object(Nesne) Nedir ? Nasıl Oluşturulur?
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+// Object(Nesne) Nedir ? Nasıl Oluşturulur?
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+// let arrayObj = [1, 2, 3]
+// let object1 = {obj: 1,test:2,test2:3}
+
+// let item4 = new Object()
+// item4.brand = 'Apple'
+// item4.name = 'iPhone'
+// item4.version = '11'
+// item4.osVersion = '16.5'
+// item4['1bir'] = 'test'
+
+// console.log(item4)
+
+// let show = {
+//     showName:"How I Met Your Mother",
+//     characters:[
+//     {
+
+//   	name:"Ted",
+//   	age: 35,
+//   	job: ["Architect"]
+//   },
+//   {
+//   	name: "Robin",
+//   	age: 32,
+//   	job: ["News Anchor", "Pop-Star"]
+//   }
+//   ]
+// };
+
+// console.log(show.characters[1].job[1])
+
+
+
+var person = {
+	name: 'Rumeysa',
+	surname: 'Turgut',
+	age: 23,
+	city: 'Istanbul',
+	introduce: () => {
+		return `My name is ${person.name} ${person.surname}, I'm ${person.age} yo.`;
+	},
+};
+
+console.log(person.introduce());
+
+
+var birey = {
+	isim: 'Ali',
+	soyisim: 'Veli',
+	dogumYili: 1989,
+	merhabaDe: (age) => `Merhaba, ben ${birey.isim} ${birey.soyisim}, ${age} yaşındayım`,
+};
+birey.yasHesapla = function () {
+	return 2021 - this.dogumYili;
+};
+console.log(birey.merhabaDe(birey.yasHesapla()));
+
+function yaz(){console.log("Merhaba Kodluyoruz")}
+
+console.log(yaz["name"]);
