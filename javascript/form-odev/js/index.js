@@ -1,35 +1,42 @@
-/*
 
-let counter = localStorage.getItem('counter') ? localStorage.getItem('counter') : 0
-let counterDOM = document.querySelector('#counter')
-let arttirDOM = document.querySelector('#arttir')
-let azaltDOM = document.querySelector('#azalt')
-let testDOM = document.querySelector('#test')
+let userFormDom=document.querySelector("#userForm");
+let alertDOM=document.querySelector("#alert");
+userFormDom.addEventListener('submit',formHandler);
+
+const alertFunction= (title,message,className="warning")=>`<div class="alert alert-${className} alert-dismissible fade show" role="alert">
+<strong>${title}</strong>
+${message}
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`;
 
 
-counterDOM.innerHTML = counter
+function formHandler(event){
+    event.preventDefault();
 
+    const USER_NAME=document.querySelector('#username');
+    const SCORE=document.querySelector('#score');
 
-arttirDOM.addEventListener("click", clickEvent)
-azaltDOM.addEventListener("click", clickEvent)
-counterDOM.addEventListener("mousemove",clickEventTwo)
-testDOM.addEventListener("click",testFunc)
-
-function clickEvent(){
-
-    this.id === "arttir" ? counter += 1 : counter -= 1
-    counterDOM.innerHTML = counter
-    localStorage.setItem('counter',counter)
+    if(((SCORE.value)>=0 && (SCORE.value)<=100) &&(USER_NAME.value.length>0))
+    {
+        addItem(USER_NAME.value,SCORE.value);//gönderdikten sonra sıfırla
+        alertDOM.innerHTML=alertFunction("Doğru","Eksik Bilgi Girdiniz !","success");
+        USER_NAME.value=null;
+        SCORE.value=null;
+    }else{
+        alertDOM.innerHTML=alertFunction("HATA","Kullanıcı bilgisi ya da not bilgisi hatalı !","danger");
+    }
+    
 }
 
-function clickEventTwo() {
 
-    this.style.color === 'red' ? this.style.color = 'blue' : this.style.color = 'red'
-}
+let userListDOM=document.querySelector('#userList');
 
-function  testFunc() {
-    //alert(this.innerHTML)
-    this.innerHTML = 'changed innerHTML'
-}
-
-* */
+const addItem=(userName,score)=> {
+    let liDOM=document.createElement('li');
+    liDOM.innerHTML=`
+    ${userName}
+    <span class="badge bg-primary rounded-pill">${score}</span>
+    `;
+    liDOM.classList.add('list-group-item','d-flex','justify-content-between','align-items-center')
+    userListDOM.append(liDOM);
+  }
