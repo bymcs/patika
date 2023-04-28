@@ -1,3 +1,5 @@
+/*
+
 let counter = localStorage.getItem('counter') ? localStorage.getItem('counter') : 0
 let counterDOM = document.querySelector('#counter')
 let arttirDOM = document.querySelector('#arttir')
@@ -14,7 +16,7 @@ counterDOM.addEventListener("mousemove",clickEventTwo)
 testDOM.addEventListener("click",testFunc)
 
 function clickEvent(){
-    
+
     this.id === "arttir" ? counter += 1 : counter -= 1
     counterDOM.innerHTML = counter
     localStorage.setItem('counter',counter)
@@ -29,3 +31,5 @@ function  testFunc() {
     //alert(this.innerHTML)
     this.innerHTML = 'changed innerHTML'
 }
+
+* */
