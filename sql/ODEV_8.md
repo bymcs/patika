@@ -3,7 +3,8 @@
 3. Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
 4. Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 
--
+
+Cevaplar
 
 1. 
 ```sql
