@@ -66,15 +66,26 @@ insert into employee (id, name, birthday, email) values (49, 'Koren', '1989-06-2
 insert into employee (id, name, birthday, email) values (50, 'Pooh', '2003-09-29', 'pmancell1d@hexun.com');
 `
 
-3. `
+3. 
+`
 UPDATE employee
 SET email = ''
 WHERE name ILIKE 'A%'
 RETURNING *;
 `
 
-4. `
+4. 
+`
 DELETE from employee
 WHERE email ILIKE '%.com'
 RETURNING *
 `
+
+```cs
+record Rec(string Name, int Age);
+
+public static void Main()
+{
+    var x = new Locked<Rec>(new ("John", 35)); 
+}
+```
