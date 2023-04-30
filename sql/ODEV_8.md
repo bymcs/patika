@@ -6,16 +6,17 @@
 -
 
 1. 
-`
+```sql
 CREATE TABLE employee (
 	id INTEGER, 
 	name VARCHAR(50), 
 	birthday DATE, 
 	email VARCHAR(100)
 );
-`
+```
 
-2. `
+2. 
+```sql
 insert into employee (id, name, birthday, email) values (1, 'Rosemonde', '2010-09-28', 'rtyre0@vkontakte.ru');
 insert into employee (id, name, birthday, email) values (2, 'Konrad', '1992-11-16', 'kgilmore1@cdbaby.com');
 insert into employee (id, name, birthday, email) values (3, 'Cairistiona', '1982-07-18', 'cmartschik2@epa.gov');
@@ -66,28 +67,19 @@ insert into employee (id, name, birthday, email) values (47, 'Lorna', '2014-07-1
 insert into employee (id, name, birthday, email) values (48, 'Laurent', '1982-09-28', 'lleitch1b@discuz.net');
 insert into employee (id, name, birthday, email) values (49, 'Koren', '1989-06-24', 'klyne1c@upenn.edu');
 insert into employee (id, name, birthday, email) values (50, 'Pooh', '2003-09-29', 'pmancell1d@hexun.com');
-`
+```
 
 3. 
-`
+```sql
 UPDATE employee
 SET email = ''
 WHERE name ILIKE 'A%'
 RETURNING *;
-`
+```
 
 4. 
 ```sql
 DELETE from employee
 WHERE email ILIKE '%.com'
 RETURNING *
-```
-
-```cs
-record Rec(string Name, int Age);
-
-public static void Main()
-{
-    var x = new Locked<Rec>(new ("John", 35)); 
-}
 ```
