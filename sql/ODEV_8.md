@@ -77,11 +77,11 @@ RETURNING *;
 `
 
 4. 
-`
+```sql
 DELETE from employee
 WHERE email ILIKE '%.com'
 RETURNING *
-`
+```
 
 ```cs
 record Rec(string Name, int Age);
