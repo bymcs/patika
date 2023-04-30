@@ -7,9 +7,9 @@ Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden ger�
 
 Cevaplar
 
- 
+1. 
 ```sql
-1. SELECT rating, COUNT(*) FROM film GROUP BY rating
+SELECT rating, COUNT(*) FROM film GROUP BY rating
 ```
 2. 
 ```sql
