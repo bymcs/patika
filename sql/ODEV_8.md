@@ -4,7 +4,7 @@
 4. Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 
 -
-1. ```sql
+1. ```console
 CREATE TABLE employee (
 	id INTEGER, 
 	name VARCHAR(50), 
