@@ -4,14 +4,14 @@
 4. Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 
 -
-1. `
+1. ```sql
 CREATE TABLE employee (
 	id INTEGER, 
 	name VARCHAR(50), 
 	birthday DATE, 
 	email VARCHAR(100)
 );
-`
+```
 
 2. `
 insert into employee (id, name, birthday, email) values (1, 'Rosemonde', '2010-09-28', 'rtyre0@vkontakte.ru');
