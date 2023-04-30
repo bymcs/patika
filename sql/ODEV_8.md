@@ -5,7 +5,6 @@
 
 -
 1. `
-
 CREATE TABLE employee (
 	id INTEGER, 
 	name VARCHAR(50), 
