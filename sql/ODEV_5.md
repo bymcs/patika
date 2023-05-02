@@ -7,18 +7,25 @@ Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden ger�
 
 Cevaplar
 
-1. `SELECT * FROM film
+1. 
+```sql
+SELECT * FROM film
 WHERE title LIKE '%n'
 ORDER BY length DESC
-LIMIT 5`
+LIMIT 5
+```
 
-2. `SELECT * FROM film
+2. 
+```sql SELECT * FROM film
 WHERE title LIKE '%n'
 ORDER BY length ASC
 OFFSET 5
-LIMIT 5`
+LIMIT 5
+```
 
-3. `SELECT * FROM customer 
+3. 
+```sql SELECT * FROM customer 
 WHERE store_id IN(1)
 ORDER BY last_name DESC
-LIMIT 4`
+LIMIT 4
+```
