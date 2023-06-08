@@ -16,18 +16,12 @@ SELECT COUNT(*) FROM  film WHERE rental_rate = ALL (SELECT MAX(rental_rate) FROM
 
 ```sql
 SELECT * FROM film
-WHERE rental_rate = ANY
-(
-	SELECT MIN(rental_rate) FROM film
-) AND
-replacement_cost = ANY
-(
-	SELECT MIN(replacement_cost) FROM film
-);
+                WHERE rental_rate = (SELECT MIN(rental_rate) FROM film) AND
+                      replacement_cost = (SELECT MIN(replacement_cost) FROM film);
 ```
 
 ```sql
-SELECT customer_id, COUNT(*) AS most_payments FROM payment
+SELECT customer_id,COUNT(*) AS count FROM payment
 GROUP BY customer_id
-ORDER BY most_payments DESC
+ORDER BY count DESC
 ```
