@@ -9,23 +9,30 @@ Cevaplar
 
 1. 
 ```sql
-SELECT * FROM film
-WHERE title LIKE '%n'
+SELECT * FROM film 
+WHERE title ILIKE '%n'
 ORDER BY length DESC
-LIMIT 5
+LIMIT 5;
 ```
 
 2. 
-```sql SELECT * FROM film
-WHERE title LIKE '%n'
+```sql 
+SELECT *
+FROM film
+WHERE title ILIKE '%n'
 ORDER BY length ASC
-OFFSET 5
-LIMIT 5
+OFFSET 5 LIMIT 5
 ```
 
 3. 
-```sql SELECT * FROM customer 
-WHERE store_id IN(1)
+```sql 
+SELECT * FROM customer WHERE store_id = 1
 ORDER BY last_name DESC
-LIMIT 4
+LIMIT 4;
 ```
+
+
+
+
+
+
