@@ -6,16 +6,22 @@ Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden ger�
 
 
 ```sql
-SELECT C.city,CO.country FROM city C
-LEFT JOIN country CO ON CO.country_id = C.country_id
+SELECT c.city,c2.country FROM city c
+LEFT JOIN country c2 on c2.country_id = c.country_id;
 ```
 
 ```sql
-SELECT P.payment_id,C.first_name,P.amount,P.payment_date FROM public.payment P
-LEFT JOIN customer C ON C.customer_id = P.customer_id
+SELECT p.payment_id,c.first_name,c.last_name FROM payment p
+RIGHT JOIN customer c on c.customer_id = p.customer_id;
 ```
 
 ```sql
-SELECT R.rental_id,R.return_date,C.first_name,C.email FROM rental R
-LEFT JOIN customer C ON C.customer_id = R.customer_id
+SELECT r.rental_id,c.first_name,c.last_name FROM rental r
+FULL JOIN customer c on c.customer_id = r.customer_id;
 ```
+
+
+
+
+
+
