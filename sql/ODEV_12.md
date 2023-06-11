@@ -16,8 +16,8 @@ SELECT COUNT(*) FROM  film WHERE rental_rate = ALL (SELECT MAX(rental_rate) FROM
 
 ```sql
 SELECT * FROM film
-                WHERE rental_rate = (SELECT MIN(rental_rate) FROM film) AND
-                      replacement_cost = (SELECT MIN(replacement_cost) FROM film);
+WHERE rental_rate = (SELECT MIN(rental_rate) FROM film) 
+AND replacement_cost = (SELECT MIN(replacement_cost) FROM film);
 ```
 
 ```sql
